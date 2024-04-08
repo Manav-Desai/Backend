@@ -12,6 +12,26 @@ const PORT = 4000;
 // Using middleware to get the form data from postman : x-www-form-urlencoded
 app.use(express.urlencoded({extended : false}));
 
+// custom middlewares in api
+app.use((req,res,next) => {
+    console.log("Hello from middleware 1");
+    next();
+})
+
+app.use((req,res,next) => {
+    console.log("Hello from middleware 2");
+    next();
+
+    /*
+    We can also return from any middleware by using return statement with any 
+    response method then the response will be passed from here only without
+    calling respective route method
+    */
+   
+})
+
+
+
 app.get("/api/users" , (req,res) => {
     console.log("User request accepted")
     return res.json(users);
