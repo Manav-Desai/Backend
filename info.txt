@@ -1,0 +1,13 @@
+In this rest api we will do the following things : 
+
+This api deals with the data of users.
+
+NOTE : All the urls with /api/.. are in the JSON Format
+
+1.  GET /api/users --> Get the information of all the user
+    GET /api/users/:id    ---> Get the information of user with id
+    e.g. /api/users/1     ---> Get the information of user with 1
+
+2. POST /api/users --> Create new user
+3. PATCH /api/users/1  ---> Edit the user with id 1
+4. DELETE /api/users/1 ---> Delete the user with id 1
